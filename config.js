@@ -52,7 +52,7 @@ const CONFIG = {
             noBtn: "Not Really.",                  // CUSTOMIZE: Theme-specific No text (Q1)
             secretAnswer: "RrrrrRaahh🦖",
             loveExtreme: "You'd distract the T. Rex for me!?! 🦖💚",
-            loveHigh: "Answer the satellite phone...on speaker...for me..how brave! 🖁💚",
+            loveHigh: "Answer the satellite phone...on speaker...for me?...how brave! 🖁💚",
             loveNormal: "You'd check the perimeter fences with me?? 💚",
             celebrationTitle: "RrrrrRahhh! Not even someone saying the modern films are better than the originals can ruin this day! 🦖🌿💚",
             celebrationMessage: "I LOVE YOU A MILLION TIMES OVER! I hope you have a ROAR-some Valentine's Day! 🦖💚",
