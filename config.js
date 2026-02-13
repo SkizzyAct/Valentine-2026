@@ -5,27 +5,164 @@
 const CONFIG = {
     // Your Valentine's name that will appear in the title
     // Example: "Jade", "Sarah", "Mike"
-    valentineName: "Jade",
+    valentineName: "Gabby",
 
     // The title that appears in the browser tab
     // You can use emojis! 💝 💖 💗 💓 💞 💕
-    pageTitle: "Will You Be My Valentine? 💝",
+    pageTitle: "Will You Be Mine? 💝",
 
-    // Floating emojis that appear in the background
-    // Find more emojis at: https://emojipedia.org
-    floatingEmojis: {
-        hearts: ['❤️', '💖', '💝', '💗', '💓'],  // Heart emojis
-        bears: ['🧸', '🐻']                       // Cute bear emojis
+    // ============================================
+    // 🎬 THEME SELECTOR CONFIGURATION 🎬
+    // ============================================
+    // This controls the theme selection screen that appears first
+    themeSelector: {
+        question: "What's Been Your Vibe Recently?",  // Question to ask on the theme selection screen
+        prehistoricBtn: "Jurassic",      // Jurassic Park theme button
+        magicalBtn: "Middle-Earth"               // Lord of the Rings theme button
     },
 
-    // Questions and answers
-    // Customize each question and its possible responses
+    // ============================================
+    // 🦖 PREHISTORIC THEME (Jurassic Park) 🦖
+    // ============================================
+    // CUSTOMIZE: Edit these values to adjust the Jurassic Park theme
+    prehistoricTheme: {
+        // Floating emojis for Prehistoric theme
+        // ADD/CHANGE: Add dinosaur emojis or replace with image URLs
+        floatingEmojis: {
+            primary: ['🦖', '🦕', '🌿', '🦴', '⛰️'],   // Dinosaur & jungle emojis
+            secondary: ['🥚', '🌴', '🏞️']                     // Eggs and palm trees
+        },
+
+        // CUSTOMIZE: Jurassic Park color scheme
+        // Use earthy greens, jungle colors, and danger reds
+        colors: {
+            backgroundStart: "#1a472a",      // Dark jungle green
+            backgroundEnd: "#37932b",        // Forest green
+            buttonBackground: "#c41e3a",     // Danger red (like JP logo)
+            buttonHover: "#ff4757",          // Lighter red on hover
+            textColor: "#f5f5dc",            // Beige/bone color for text
+            containerBg: "#ffd700",  // Dark green container
+            accentColor: "#ffd700"           // Gold accent (amber/fossil color)
+        },
+
+        // CUSTOMIZE: Theme-specific messages
+        messages: {
+            title: "my Cenozoic Era Partner...",             // Can change to something dino-themed
+            yesBtn: "Yes!",            // CUSTOMIZE: Theme-specific Yes text (Q1)
+            noBtn: "Not Really.",                  // CUSTOMIZE: Theme-specific No text (Q1)
+            secretAnswer: "RrrrrRaahh🦖",
+            loveExtreme: "I’d distract the T. Rex for you!! 🦖💚",
+            loveHigh: "I’d answer the satellite phone...on speaker...for you! 🖁💚",
+            loveNormal: "I'd check the perimeter fences with you! 💚",
+            celebrationTitle: "RrrrrRahhh! Not even someone saying the modern films are better than the originals can ruin this day! 🦖🌿💚",
+            celebrationMessage: "I LOVE YOU A MILLION TIMES OVER! I hope you have a ROAR-some Valentine's Day! 🦖💚",
+            celebrationEmojis: "🎁🦖🦕🌿🦴💚🥚"
+        },
+
+        // CUSTOMIZE: Background images for Jurassic Park theme
+        // main: shown during questions, celebration: shown on final screen
+        // If your image has text, try size: "contain" to avoid cropping.
+        backgrounds: {
+            main: "",
+            celebration: ""
+        },
+        // CUSTOMIZE: How the background fits the screen
+        // Use "contain" to avoid cutting off text, "cover" to fill screen
+        backgroundSize: "contain",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+
+        // CUSTOMIZE: Add a logo/icon for the theme
+        // Example: logo: "path/to/jp-logo.png"
+        logo: "",
+
+        // CUSTOMIZE: Theme-specific music (optional)
+        // Leave musicUrl empty to fall back to the global music setting
+        music: {
+            enabled: true,
+            autoplay: true,
+            musicUrl: "./audio/jurassic-theme.mp3",
+            startText: "🎵 Play Music",
+            stopText: "🔇 Stop Music",
+            volume: 0.5
+        }
+    },
+
+    // ============================================
+    // 🧙 MAGICAL THEME (Lord of the Rings) 🧙
+    // ============================================
+    // CUSTOMIZE: Edit these values to adjust the Lord of the Rings theme
+    magicalTheme: {
+        // Floating emojis for Magical theme
+        // ADD/CHANGE: Add fantasy emojis or replace with image URLs
+        floatingEmojis: {
+            primary: ['🧙‍♂️', '💍', '🗡️', '⚔️', '🏔️', '🌋'],  // Wizard, ring, swords, mountains
+            secondary: ['🧝', '🌟', '🦄', '⚒️', '🐉', '❤️']                      // Elves and stars
+        },
+
+        // CUSTOMIZE: Lord of the Rings color scheme
+        // Use mystical golds, deep blues, and elvish silvers
+        colors: {
+            backgroundStart: "#1a1a2e",      // Deep night blue
+            backgroundEnd: "#16213e",        // Midnight blue
+            buttonBackground: "#c9a227",     // Gold (like the One Ring)
+            buttonHover: "#e6b800",          // Brighter gold on hover
+            textColor: "#e8d5b7",            // Parchment/elvish text color
+            containerBg: "rgba(30, 30, 50, 0.9)",  // Dark mystical container
+            accentColor: "#c0c0c0"           // Silver accent (mithril color)
+        },
+
+        // CUSTOMIZE: Theme-specific messages
+        messages: {
+            title: "my hobbit love...",         // LOTR themed title
+            yesBtn: "Yes!",     // CUSTOMIZE: Theme-specific Yes text (Q1)
+            noBtn: "Not today...",           // CUSTOMIZE: Theme-specific No text (Q1)
+            secretAnswer: "PRECIOUSSSSS💍",
+            loveHigh: "No crossing of Mordor is too dangerous for you, my love! 🧙‍♂️💍🌋",
+            loveNormal: "I would brave the Mines of Moria for you!🗡️🐉⚒️",
+            loveExtreme: "More than Samwise loves Frodo?!?🌟❤️",
+            celebrationTitle: "You have my heart! And my axe! 🧙‍♂️⚔️💍✨",
+            celebrationMessage: "I LOVE YOU TO THE SHIRE AND BACK! I hope you have a magical Valentine's Day! 🧙‍♂️💍✨",
+            celebrationEmojis: "🎁💍🧙‍♂️⚔️🗡️✨🌟"
+        },
+
+        // CUSTOMIZE: Background images for LOTR theme
+        // main: shown during questions, celebration: shown on final screen
+        backgrounds: {
+            main: "",
+            celebration: ""
+        },
+        // CUSTOMIZE: How the background fits the screen
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+
+        // CUSTOMIZE: Add a logo/icon for the theme
+        // Example: logo: "path/to/lotr-logo.png"
+        logo: "",
+
+        // CUSTOMIZE: Theme-specific music (optional)
+        // Leave musicUrl empty to fall back to the global music setting
+        music: {
+            enabled: true,
+            autoplay: true,
+            musicUrl: "./audio/lotr-hobbits.mp3",
+            startText: "🎵 Play Music",
+            stopText: "🔇 Stop Music",
+            volume: 0.5
+        }
+    },
+
+    // ============================================
+    // 📝 SHARED QUESTIONS (Used by both themes)
+    // ============================================
+    // Questions and answers - these are shared but messages above override some text
     questions: {
         first: {
-            text: "Do you like me?",                                    // First interaction
+            text: "Do you LOVE me?",                                    // First interaction
             yesBtn: "Yes",                                             // Text for "Yes" button
             noBtn: "No",                                               // Text for "No" button
-            secretAnswer: "I don't like you, I love you! ❤️"           // Secret hover message
+            secretAnswer: "I don't like you, I love you! ❤️"           // Default - overridden by theme
         },
         second: {
             text: "How much do you love me?",                          // For the love meter
@@ -33,48 +170,24 @@ const CONFIG = {
             nextBtn: "Next ❤️"                                         // Text for the next button
         },
         third: {
-            text: "Will you be my Valentine on February 14th, 2025? 🌹", // The big question!
+            text: "Will you be my Valentine on February 14th, 2026? 🌹", // The big question!
             yesBtn: "Yes!",                                             // Text for "Yes" button
             noBtn: "No"                                                 // Text for "No" button
         }
     },
 
-    // Love meter messages
-    // They show up depending on how far they slide the meter
-    loveMessages: {
-        extreme: "WOOOOW You love me that much?? 🥰🚀💝",  // Shows when they go past 5000%
-        high: "To infinity and beyond! 🚀💝",              // Shows when they go past 1000%
-        normal: "And beyond! 🥰"                           // Shows when they go past 100%
-    },
-
-    // Messages that appear after they say "Yes!"
-    celebration: {
-        title: "Yay! I'm the luckiest person in the world! 🎉💝💖💝💓",
-        message: "Now come get your gift, a big warm hug and a huge kiss!",
-        emojis: "🎁💖🤗💝💋❤️💕"  // These will bounce around
-    },
-
-    // Color scheme for the website
-    // Use https://colorhunt.co or https://coolors.co to find beautiful color combinations
-    colors: {
-        backgroundStart: "#ffafbd",      // Gradient start (try pastel colors for a soft look)
-        backgroundEnd: "#ffc3a0",        // Gradient end (should complement backgroundStart)
-        buttonBackground: "#ff6b6b",     // Button color (should stand out against the background)
-        buttonHover: "#ff8787",          // Button hover color (slightly lighter than buttonBackground)
-        textColor: "#ff4757"             // Text color (make sure it's readable!)
-    },
-
-    // Animation settings
+    // Animation settings (shared by both themes)
     // Adjust these if you want faster/slower animations
     animations: {
-        floatDuration: "15s",           // How long it takes hearts to float up (10-20s recommended)
-        floatDistance: "50px",          // How far hearts move sideways (30-70px recommended)
+        floatDuration: "15s",           // How long it takes elements to float up (10-20s recommended)
+        floatDistance: "50px",          // How far elements move sideways (30-70px recommended)
         bounceSpeed: "0.5s",            // Speed of bouncing animations (0.3-0.7s recommended)
-        heartExplosionSize: 1.5         // Size of heart explosion effect (1.2-2.0 recommended)
+        heartExplosionSize: 1.5         // Size of explosion effect (1.2-2.0 recommended)
     },
 
     // Background Music (Optional)
     // Add your own music URL after getting proper licenses
+    // CUSTOMIZE: You can add different music URLs for each theme in the theme objects above
     music: {
         enabled: true,                     // Music feature is enabled
         autoplay: true,                    // Try to autoplay (note: some browsers may block this)
@@ -85,5 +198,31 @@ const CONFIG = {
     }
 };
 
+// ============================================
+// 🎨 HOW TO ADD CUSTOM IMAGES/ICONS 🎨
+// ============================================
+// 
+// 1. BACKGROUND IMAGES:
+//    - Add your image to the project folder
+//    - Set backgroundImage in the theme config:
+//      backgroundImage: "url('./images/jurassic-bg.jpg')"
+//
+// 2. FLOATING IMAGES (instead of emojis):
+//    - You can use CSS to add custom images
+//    - See styles.css for .heart and .bear classes
+//    - Add a new class like .dino or .ring with your image
+//
+// 3. LOGO/ICONS:
+//    - Add logo path to the theme config
+//    - The logo will appear in the header
+//
+// 4. CUSTOM FONTS:
+//    - Add Google Font links in index.html
+//    - Reference them in styles.css
+// ============================================
+
 // Don't modify anything below this line unless you know what you're doing
-window.VALENTINE_CONFIG = CONFIG; 
+window.VALENTINE_CONFIG = CONFIG;
+
+// Track selected theme globally
+window.SELECTED_THEME = null; 

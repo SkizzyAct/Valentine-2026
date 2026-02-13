@@ -7,6 +7,7 @@
     <title>Will You Be My Valentine? 💝</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,8 +17,28 @@
         <!-- Hearts and bears will be added here by JavaScript -->
     </div>
 
-    <!-- Main Content Container -->
-    <div class="container">
+    <!-- ============================================ -->
+    <!-- 🎬 THEME SELECTOR - Appears First 🎬 -->
+    <!-- ============================================ -->
+    <div class="theme-selector" id="themeSelector">
+        <div class="theme-selector-container">
+            <h1 id="themeSelectorQuestion">Whats Been Your Vibe Recently?</h1>
+            <div class="theme-buttons">
+                <!-- CUSTOMIZE: Change button text in config.js -> themeSelector -->
+                <button class="theme-btn prehistoric-btn" onclick="selectTheme('prehistoric')" id="prehistoricBtn">
+                    <span class="theme-icon">🦖</span>
+                    <span class="theme-text">Prehistoric</span>
+                </button>
+                <button class="theme-btn magical-btn" onclick="selectTheme('magical')" id="magicalBtn">
+                    <span class="theme-icon">🧙</span>
+                    <span class="theme-text">Magical</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Container (Hidden until theme is selected) -->
+    <div class="container hidden" id="mainContainer">
         <h1 id="valentineTitle"></h1>
         
         <!-- Music Player -->
@@ -32,7 +53,7 @@
         <!-- First Question -->
         <div class="question-section" id="question1">
             <h2 id="question1Text"></h2>
-            <button class="cute-btn" onclick="moveButton(this)" id="yesBtn1"></button>
+            <button class="cute-btn" onclick="showNextQuestion(2)" id="yesBtn1"></button>
             <button class="cute-btn" onclick="moveButton(this)" id="noBtn1"></button>
             <!-- CUSTOMIZE: Secret answer text -->
             <div class="secret-answer">
@@ -43,11 +64,11 @@
         <!-- Second Question (Love Meter) -->
         <div class="question-section hidden" id="question2">
             <h2 id="question2Text"></h2>
-            <!-- Love meter settings: min="0" max="10000" -->
+            <!-- Love meter settings: min="50" max="10000" -->
             <div class="love-meter">
-                <input type="range" min="0" max="10000" value="100" class="slider" id="loveMeter">
+                <input type="range" min="50" max="10000" value="50" class="slider" id="loveMeter">
                 <p>
-                    <span class="love-value-container"><span id="startText"></span> (<span id="loveValue">100</span>%)</span>
+                    <span class="love-value-container"><span id="startText"></span> (<span id="loveValue">50</span>%)</span>
                     <span id="extraLove" class="hidden"></span>
                 </p>
             </div>
