@@ -51,9 +51,9 @@ const CONFIG = {
             yesBtn: "Yes!",            // CUSTOMIZE: Theme-specific Yes text (Q1)
             noBtn: "Not Really.",                  // CUSTOMIZE: Theme-specific No text (Q1)
             secretAnswer: "RrrrrRaahh🦖",
-            loveExtreme: "I’d distract the T. Rex for you!! 🦖💚",
-            loveHigh: "I’d answer the satellite phone...on speaker...for you! 🖁💚",
-            loveNormal: "I'd check the perimeter fences with you! 💚",
+            loveExtreme: "You'd distract the T. Rex for me!?! 🦖💚",
+            loveHigh: "Answer the satellite phone...on speaker...for me..how brave! 🖁💚",
+            loveNormal: "You'd check the perimeter fences with me?? 💚",
             celebrationTitle: "RrrrrRahhh! Not even someone saying the modern films are better than the originals can ruin this day! 🦖🌿💚",
             celebrationMessage: "I LOVE YOU A MILLION TIMES OVER! I hope you have a ROAR-some Valentine's Day! 🦖💚",
             celebrationEmojis: "🎁🦖🦕🌿🦴💚🥚"
@@ -118,8 +118,8 @@ const CONFIG = {
             yesBtn: "Yes!",     // CUSTOMIZE: Theme-specific Yes text (Q1)
             noBtn: "Not today...",           // CUSTOMIZE: Theme-specific No text (Q1)
             secretAnswer: "PRECIOUSSSSS💍",
-            loveHigh: "No crossing of Mordor is too dangerous for you, my love! 🧙‍♂️💍🌋",
-            loveNormal: "I would brave the Mines of Moria for you!🗡️🐉⚒️",
+            loveHigh: "You'd seriously cross Mordor for me?! 🧙‍♂️💍🌋",
+            loveNormal: "Awww...you'd brave the Mines of Moria just for me??🗡️🐉⚒️",
             loveExtreme: "More than Samwise loves Frodo?!?🌟❤️",
             celebrationTitle: "You have my heart! And my axe! 🧙‍♂️⚔️💍✨",
             celebrationMessage: "I LOVE YOU TO THE SHIRE AND BACK! I hope you have a magical Valentine's Day! 🧙‍♂️💍✨",
@@ -165,12 +165,12 @@ const CONFIG = {
             secretAnswer: "I don't like you, I love you! ❤️"           // Default - overridden by theme
         },
         second: {
-            text: "How much do you love me?",                          // For the love meter
+            text: "How much do you LOVE me?",                          // For the love meter
             startText: "This much!",                                   // Text before the percentage
             nextBtn: "Next ❤️"                                         // Text for the next button
         },
         third: {
-            text: "Will you be my Valentine on February 14th, 2026? 🌹", // The big question!
+            text: "Well, since you LOVE me SO much, will you be my Valentine? 🌹", // The big question!
             yesBtn: "Yes!",                                             // Text for "Yes" button
             noBtn: "No"                                                 // Text for "No" button
         }
